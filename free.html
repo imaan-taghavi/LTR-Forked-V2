@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The LTR DRUMMING Open-Handed System — Transform Your Drumming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold:     #E8A020;
+  --gold-dim: rgba(232,160,32,0.10);
+  --gold-brd: rgba(232,160,32,0.45);
+  --dark:     #FFFFFF;
+  --dark-2:   #F7F6F2;
+  --dark-3:   #FFFFFF;
+  --dark-4:   #FFFFFF;
+  --text:     #111111;
+  --muted:    #5A5751;
+  --border:   rgba(17,17,17,0.12);
+  --font-d:   'Bebas Neue', sans-serif;
+  --font-b:   'DM Sans', sans-serif;
+  --r:        10px;
+  --r-lg:     14px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: var(--font-b);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ── HEADER ── */
+.hdr {
+  padding: 1.1rem 0;
+  border-bottom: 0.5px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.lmark {
+  width: 36px; height: 36px;
+  border: 2px solid var(--text); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-d); font-size: 13px; color: var(--text);
+  flex-shrink: 0;
+}
+.ltext strong { display: block; font-size: 12px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; }
+.ltext span   { display: block; font-size: 10px; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+/* ── HERO ── */
+
+.hero-img-wrap {
+  padding: 2rem 0 0;
+  width: 50%;
+  padding-right: 3rem;
+}
+.hero-img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -30px;
+}
+  .logo-img { 
+  height: 32px; 
+  width: auto; 
+  max-width: 90px; 
+  object-fit: contain; 
+  flex-shrink: 0;
+  filter: invert(1);
+}
+  
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.5px solid var(--border);
+}
+.hero-l {
+  padding: 4rem 3rem 4rem 0;
+  border-right: 0.5px solid var(--border);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.hero-r {
+  padding: 0 0 4rem 3rem;
+  margin-top: -180px;
+  display: flex; flex-direction: column; gap: 1.2rem; justify-content: flex-start;
+}
+.eyebrow {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 1.1rem;
+}
+.eyebrow.gold { color: var(--gold); margin-bottom: 0; }
+.hero-h {
+  font-family: var(--font-d);
+  font-size: 58px; line-height: 1.0;
+  letter-spacing: 0.02em; margin-bottom: 1.25rem;
+}
+.hero-h em { color: var(--gold); font-style: normal; }
+.hero-sub {
+  font-size: 15px; color: var(--muted);
+  line-height: 1.7; max-width: 420px; margin-bottom: 0.75rem;
+}
+.hero-fine { font-size: 12px; color: rgba(134,129,121,0.55); }
+.panel-title {
+  font-family: var(--font-d);
+  font-size: 30px; line-height: 1.1; letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+.benefit {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px; color: var(--muted); line-height: 1.55;
+}
+.chk {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+  font-size: 11px; color: #111; font-weight: 700;
+}
+.bio-box {
+  background: var(--dark-2); border: 0.5px solid var(--border);
+  border-radius: var(--r); padding: 1.25rem 1.1rem;
+  display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center;
+}
+.bio-photo {
+  width: 130px; height: 130px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  border: 0.5px solid var(--border);
+  background: var(--dark-2);
+}
+.bio-content { flex: 1; min-width: 0; }
+.bio-name { font-size: 12px; font-weight: 500; color: var(--gold); margin-bottom: 0.35rem; }
+.bio-text { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.end-label { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 0.5rem; }
+.logos { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; align-items: center; }
+.logo-p {
+  background: rgba(17,17,17,0.04); border: 0.5px solid var(--border);
+  border-radius: 5px; padding: 4px 9px;
+  font-size: 10px; font-weight: 500; color: var(--muted); letter-spacing: 0.05em;
+}
+.logo-img { height: 32px; width: auto; max-width: 90px; object-fit: contain; flex-shrink: 0; }
+/* ── REELS SCROLL ── */
+.reels-scroll {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 1.5rem;
+  padding: 1rem 0 1.5rem;
+  margin-top: 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-brd) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+.reels-scroll::-webkit-scrollbar { height: 6px; }
+.reels-scroll::-webkit-scrollbar-track { background: transparent; }
+.reels-scroll::-webkit-scrollbar-thumb { background: var(--gold-brd); border-radius: 3px; }
+.reels-scroll::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+.reel-card {
+  flex: 0 0 auto;
+  width: 280px;
+  aspect-ratio: 9 / 16;
+  background: #0A0A0A;
+  border-radius: var(--r-lg);
+  scroll-snap-align: start;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(17,17,17,0.06), 0 8px 24px rgba(17,17,17,0.04);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s ease;
+}
+.reel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(17,17,17,0.10), 0 16px 40px rgba(17,17,17,0.08);
+}
+.reel-card video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reel-play {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.15) 100%);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.reel-card.playing .reel-play { opacity: 0; }
+.reel-btn {
+  width: 62px; height: 62px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.reel-card:hover .reel-btn {
+  background: var(--gold);
+  transform: scale(1.08);
+}
+.reel-btn svg { width: 22px; height: 22px; margin-left: 3px; fill: #111; }
+
+.reel-sound {
+  position: absolute; top: 12px; right: 12px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: none;
+  opacity: 0;
+  transition: opacity 0.25s ease, background 0.2s;
+  z-index: 2;
+}
+.reel-card.playing .reel-sound { opacity: 1; }
+.reel-sound:hover { background: rgba(0,0,0,0.8); }
+.reel-sound svg { width: 15px; height: 15px; fill: white; }
+/* ── SHARED SECTION ── */
+.sec { padding: 4rem 0; border-top: 0.5px solid var(--border); }
+.sec.alt { background: var(--dark-2); }
+.sec-label {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold);
+  text-align: center; margin-bottom: 0.5rem;
+}
+.sec-h {
+  font-family: var(--font-d); font-size: 40px; letter-spacing: 0.03em;
+  text-align: center; line-height: 1.05; margin-bottom: 0.4rem;
+}
+.sec-sub {
+  font-size: 14px; color: var(--muted); text-align: center;
+  max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.65;
+}
+
+/* ── FORM ── */
+.form-sec { padding: 4rem 0; border-top: 0.5px solid var(--border); background: var(--dark-2); }
+
+.step-dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 2rem; }
+.dot {
+  width: 28px; height: 4px; border-radius: 2px;
+  background: rgba(17,17,17,0.12); transition: background 0.3s;
+}
+.dot.active { background: var(--gold); }
+.dot.done   { background: rgba(232,160,32,0.3); }
+
+.fcard {
+  background: var(--dark-2); border: 0.5px solid var(--border);
+  border-radius: var(--r-lg); padding: 2rem;
+  max-width: 520px; margin: 0 auto;
+}
+.fstep { display: none; }
+.fstep.on { display: block; }
+
+.fh { font-size: 18px; font-weight: 500; margin-bottom: 0.3rem; }
+.fp { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 1.4rem; }
+
+.field { margin-bottom: 12px; }
+.field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.field input {
+  width: 100%; background: #FFFFFF;
+  border: 0.5px solid var(--border); border-radius: var(--r);
+  padding: 11px 14px; font-size: 14px; color: var(--text);
+  font-family: var(--font-b); outline: none; transition: border-color 0.2s;
+}
+.field input:focus { border-color: var(--gold); }
+.field input::placeholder { color: var(--muted); }
+
+.scale-row { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 6px; }
+.sb {
+  flex: 1; min-width: 34px; padding: 9px 4px; text-align: center;
+  border: 0.5px solid var(--border); border-radius: 7px;
+  background: #FFFFFF; color: var(--muted);
+  font-size: 13px; font-family: var(--font-b); cursor: pointer;
+  transition: all 0.18s;
+}
+.sb:hover { border-color: var(--gold); color: var(--gold); }
+.sb.sel   { background: var(--gold); color: #111; border-color: var(--gold); font-weight: 500; }
+.scale-lbl { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 1.4rem; }
+
+.pref-row { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.4rem; }
+.pref-card {
+  border: 0.5px solid var(--border);
+  border-radius: var(--r); padding: 1.1rem 1.25rem;
+  background: #FFFFFF; cursor: pointer;
+  transition: all 0.18s; display: flex; align-items: flex-start; gap: 12px;
+}
+.pref-card:hover { border-color: var(--gold); background: rgba(232,160,32,0.06); }
+.pref-card.sel { border-color: var(--gold); background: rgba(232,160,32,0.1); }
+.pref-radio {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 0.5px solid var(--muted);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px; transition: border-color 0.18s;
+}
+.pref-card.sel .pref-radio { border-color: var(--gold); }
+.pref-radio-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--gold); opacity: 0;
+  transition: opacity 0.18s;
+}
+.pref-card.sel .pref-radio-dot { opacity: 1; }
+.pref-body {}
+.pref-title { font-size: 14px; font-weight: 500; margin-bottom: 0.2rem; color: var(--text); }
+.pref-desc  { font-size: 12px; color: var(--muted); line-height: 1.55; }
+
+.three-btn-row { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 1.1rem; }
+.tbtn {
+  padding: 14px; text-align: center;
+  border: 0.5px solid var(--border); border-radius: var(--r);
+  background: #FFFFFF; color: var(--text);
+  font-size: 14px; font-family: var(--font-b); cursor: pointer;
+  transition: all 0.18s; line-height: 1.4;
+}
+.tbtn.primary:hover { background: var(--gold); color: #111; border-color: var(--gold); }
+.tbtn.secondary:hover { background: rgba(232,160,32,0.15); border-color: var(--gold); }
+.tbtn.tertiary:hover  { background: rgba(17,17,17,0.04); border-color: rgba(17,17,17,0.2); }
+
+.btn-g {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 13px;
+  background: var(--gold); color: #111;
+  border-radius: var(--r); font-size: 15px; font-weight: 500;
+  font-family: var(--font-b); border: none; cursor: pointer;
+  text-decoration: none; transition: opacity 0.18s;
+  margin-top: 0.25rem;
+}
+.btn-g:hover { opacity: 0.88; }
+.btn-g.hero-cta {
+  width: fit-content; padding: 13px 26px; margin-top: 2rem;
+  font-size: 16px;
+}
+
+.fine { font-size: 12px; color: var(--muted); text-align: center; margin-top: 0.85rem; line-height: 1.6; }
+.fine a { color: var(--gold); text-decoration: none; }
+.fine a:hover { text-decoration: underline; }
+.divider { border: none; border-top: 0.5px solid var(--border); margin: 1.25rem 0; }
+
+/* ── SOCIAL PROOF ── */
+.proof-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 12px; margin-top: 2rem;
+}
+.proof-c {
+  background: var(--dark-2); border: 0.5px solid var(--border);
+  border-radius: var(--r-lg); padding: 1.25rem;
+}
+.stars { color: var(--gold); font-size: 12px; letter-spacing: 2px; margin-bottom: 0.6rem; }
+.proof-q { font-size: 13px; color: var(--muted); line-height: 1.65; font-style: italic; margin-bottom: 0.75rem; }
+.proof-n { font-size: 11px; font-weight: 500; }
+.filipi {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--dark-2); border: 0.5px solid var(--border);
+  border-radius: var(--r); padding: 1rem 1.25rem;
+  max-width: 440px; margin: 1.75rem auto 0;
+}
+.filipi-t { font-size: 13px; color: var(--muted); }
+.filipi-a { font-size: 13px; color: var(--gold); text-decoration: none; white-space: nowrap; }
+.filipi-a:hover { text-decoration: underline; }
+
+/* ── EXPANDABLE SOCIAL PROOF ── */
+.expand-proof-btn {
+  background: transparent; border: 0.5px solid var(--gold);
+  color: var(--gold); padding: 10px 20px; border-radius: var(--r);
+  font-size: 13px; font-weight: 500; font-family: var(--font-b);
+  cursor: pointer; transition: all 0.18s;
+}
+.expand-proof-btn:hover { background: rgba(232,160,32,0.1); }
+.proof-expanded {
+  animation: fadeUp 0.3s ease;
+}
+
+/* ── MODULES ── */
+.mods-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+}
+.mod {
+  background: #FFFFFF; border: 0.5px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden; transition: border-color 0.2s;
+}
+.mod:hover { border-color: var(--gold-brd); }
+.mod-thumb {
+  background: var(--dark-2);
+  height: auto;
+  aspect-ratio: 16 / 10;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; font-size: 32px; color: rgba(17,17,17,0.10);
+  overflow: hidden;
+}
+.mod-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.mbadge {
+  position: absolute; bottom: 0; left: 0;
+  padding: 4px 10px; font-size: 9px; font-weight: 500;
+  letter-spacing: 0.07em; text-transform: uppercase;
+}
+.mb-free   { background: rgba(232,160,32,0.16); color: var(--gold); }
+.mb-locked { background: rgba(17,17,17,0.06); color: var(--muted); }
+.mod-body { padding: 0.85rem 1rem; }
+.mod-t { font-size: 13px; font-weight: 500; margin-bottom: 0.25rem; }
+.mod-d { font-size: 11px; color: var(--muted); line-height: 1.55; }
+
+/* ── PRICING ── */
+.plan-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 14px; max-width: 860px; margin: 0 auto;
+}
+.plan {
+  background: var(--dark-2); border: 0.5px solid var(--border);
+  border-radius: var(--r-lg); padding: 1.5rem;
+}
+.plan.featured { border-color: var(--gold-brd); }
+.plan-price  { font-family: var(--font-d); font-size: 42px; letter-spacing: 0.02em; }
+.plan-period { font-size: 13px; color: var(--muted); }
+.plan-name   { font-size: 14px; font-weight: 500; color: var(--muted); margin-bottom: 1rem; }
+.plan-feats  { list-style: none; margin-bottom: 1.25rem; }
+.plan-feats li {
+  display: flex; gap: 8px; align-items: flex-start;
+  font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 0.5rem;
+}
+.plan-feats li::before { content: '✓'; color: var(--gold); flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+.plan-btn {
+  display: block; width: 100%; padding: 11px;
+  background: var(--gold); color: #111; border: none;
+  border-radius: var(--r); font-size: 14px; font-weight: 500;
+  font-family: var(--font-b); cursor: pointer;
+  text-decoration: none; text-align: center; transition: opacity 0.18s;
+}
+.plan-btn:hover { opacity: 0.88; }
+.plan-btn.ghost {
+  background: transparent; color: var(--muted);
+  border: 0.5px solid var(--border);
+}
+
+/* ── FAQ ── */
+.faq-wrap { max-width: 660px; margin: 0 auto; }
+.faq-item {
+  border: 0.5px solid var(--border); border-radius: var(--r);
+  margin-bottom: 9px; overflow: hidden; transition: border-color 0.2s;
+}
+.faq-item.open { border-color: var(--gold-brd); }
+.faq-q {
+  width: 100%; background: var(--dark-2); border: none;
+  padding: 1rem 1.25rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  font-size: 14px; font-weight: 500; color: var(--text);
+  font-family: var(--font-b); cursor: pointer; text-align: left;
+  transition: background 0.18s;
+}
+.faq-q:hover { background: #EFEDE7; }
+.faq-ic {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 0.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--gold); flex-shrink: 0;
+  transition: transform 0.25s, background 0.18s; line-height: 1;
+}
+.faq-item.open .faq-ic { transform: rotate(45deg); background: var(--gold-dim); }
+.faq-a {
+  background: var(--dark-2); padding: 0 1.25rem;
+  font-size: 13px; color: var(--muted); line-height: 1.7;
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.32s ease, padding 0.25s;
+}
+.faq-item.open .faq-a { max-height: 320px; padding: 0 1.25rem 1rem; }
+
+/* ── BOTTOM CTA ── */
+.cta-sec {
+  padding: 5rem 0; text-align: center;
+  border-top: 0.5px solid var(--border); background: var(--dark-2);
+}
+.cta-h {
+  font-family: var(--font-d); font-size: 46px;
+  letter-spacing: 0.03em; line-height: 1.05; margin-bottom: 0.75rem;
+}
+.cta-sub { font-size: 15px; color: var(--muted); max-width: 480px; margin: 0 auto 2rem; line-height: 1.65; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 36px; background: var(--gold); color: #111;
+  border-radius: var(--r); font-size: 15px; font-weight: 500;
+  font-family: var(--font-b); border: none; cursor: pointer;
+  transition: opacity 0.18s;
+}
+.cta-btn:hover { opacity: 0.88; }
+.cta-fine { font-size: 12px; color: var(--muted); margin-top: 0.85rem; }
+
+/* ── FOOTER ── */
+.footer { padding: 1.5rem 0; border-top: 0.5px solid var(--border); }
+.footer p { font-size: 12px; color: var(--muted); text-align: center; }
+
+/*
+.hero-l .eyebrow { margin-top: -9.22rem;  }*/
+.hero-fine { margin-top: 1rem;}
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-l { padding: 2.5rem 0 1.5rem; border-right: none; border-bottom: 0.5px solid var(--border); }
+  .hero-r { padding: 1.5rem 0 2.5rem; }
+  .hero-h { font-size: 40px; }
+  .mods-grid { grid-template-columns: 1fr; }
+  .proof-grid { grid-template-columns: 1fr; }
+  .plan-grid  { grid-template-columns: 1fr; }
+  .sec-h { font-size: 30px; }
+  .cta-h { font-size: 32px; }
+  .hero-img-wrap {
+  width: 100%;
+  padding-right: 0;
+  text-align: center;
+  padding-top: 1rem;
+}
+.hero-img { margin: -10px auto 0; max-width: 240px; }
+.hero-l .eyebrow { margin-top: -1.22rem;  }
+.btn-g.hero-cta { margin-top: -0.30rem; }
+.hero-fine { margin-top: 1rem;}
+.hero-r { margin-top: 0; padding: 1.5rem 0 2.5rem; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-l > * { animation: fadeUp 0.5s ease both; }
+.hero-l > *:nth-child(1) { animation-delay: 0.04s; }
+.hero-l > *:nth-child(2) { animation-delay: 0.10s; }
+.hero-l > *:nth-child(3) { animation-delay: 0.17s; }
+.hero-l > *:nth-child(4) { animation-delay: 0.24s; }
+.hero-l > *:nth-child(5) { animation-delay: 0.31s; }
+.hero-l > *:nth-child(6) { animation-delay: 0.38s; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="wrap">
+  <header class="hdr">
+    <img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487317c135509c886326b.png" alt="Chris Lesso" style="height:36px;width:auto;flex-shrink:0;" />
+    <div class="ltext">
+      <strong>Life Through Rhythm</strong>
+      <span>Your best self through drumming</span>
+    </div>
+  </header>
+</div>
+
+<!-- HERO IMAGE -->
+<div class="wrap">
+  <div class="hero-img-wrap">
+    <img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a163ebfecd67a415b95f044.png" alt="" class="hero-img" />
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     1. HERO
+     ══════════════════════════════════ -->
+<div class="wrap">
+  <div class="hero">
+
+    <div class="hero-l">
+      <p class="eyebrow">LTR DRUMMING — Open-Handed System</p>
+      <h1 class="hero-h">Want to unlock <em>Open-Handed Freedom</em> on the drums?</h1>
+      <p class="hero-sub">Get instant access to the LTR DRUMMING Open-Handed System and transform your drumming today. Without spending hours a day, even if you've played cross-handed for years.</p>
+  
+      <button class="btn-g hero-cta" onclick="document.getElementById('form-sec').scrollIntoView({behavior:'smooth'})">
+        Transform My Drumming Now! &rarr;
+      </button>
+          <p class="hero-fine">Your privacy and data will always be respected.</p>
+    </div>
+
+    <div class="hero-r">
+      <p class="eyebrow gold">Play with more freedom and FLOW today</p>
+      <h2 class="panel-title">For drummers who refuse to be average</h2>
+      <div class="benefit"><div class="chk">✓</div><span>No more random exercises that don't work</span></div>
+      <div class="benefit"><div class="chk">✓</div><span>No more reading and rudiments going nowhere</span></div>
+      <div class="benefit"><div class="chk">✓</div><span>Drum with more freedom and FLOW with a clear system that works</span></div>
+      <div class="bio-box">
+        <img class="bio-photo" src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a148731069d64aa5d31f2c1.jpg" alt="Chris Lesso" />
+        <div class="bio-content">
+          <div class="bio-name">Chris Lesso &amp; LTR DRUMMING</div>
+          <div class="bio-text">Chris Lesso is an expert at using open-handed drumming to elevate focus, confidence, and self expression. Life Through Rhythm is an attitude and way of life — using rhythm as a force to live your fullest potential.</div>
+        </div>
+      </div>
+      <div>
+        <div class="end-label">Chris is endorsed by</div>
+        <div class="logos">
+          <img class="logo-img" src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a148735069d64aa5d31f2f1.png" alt="Sonor" />
+          <img class="logo-img" src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a148733a0bd00c015f36d49.png" alt="Remo" />
+          <img class="logo-img" src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487359b6d07a704acf059.png" alt="Sabian" />
+          <img class="logo-img" src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487366cc0eead5cdb8223.png" alt="Vic Firth" />
+          <img class="logo-img" src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487339b6d07a704acf02d.png" alt="Prologix" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     2. OPT-IN FORM
+     ══════════════════════════════════ -->
+<div class="form-sec" id="form-sec">
+  <div class="wrap">
+    <p class="sec-label">Free access</p>
+    <h2 class="sec-h">Get the LTR DRUMMING Open-Handed System</h2>
+
+    <div class="step-dots">
+      <div class="dot active" id="d1"></div>
+      <div class="dot" id="d2"></div>
+      <div class="dot" id="d3"></div>
+      <div class="dot" id="d4"></div>
+      <div class="dot" id="d5"></div>
+    </div>
+
+    <div class="fcard">
+
+      <!-- Step 1: name + email -->
+      <div class="fstep on" id="s1">
+        <h3 class="fh">Let's supercharge your drumming</h3>
+        <div class="field"><label for="fn">First name</label><input type="text" id="fn" placeholder="Your first name" /></div>
+        <div class="field" style="margin-bottom:1.5rem;"><label for="fe">Email address</label><input type="email" id="fe" placeholder="you@example.com" /></div>
+        <button class="btn-g" onclick="if(captureStep1()){go(2);}else{alert('Please fill both fields');}">Next &rarr;</button>
+        <p class="fine">Your privacy and data will always be respected.</p>
+      </div>
+
+      <!-- Step 2: phone + flow frequency -->
+      <div class="fstep" id="s2">
+        <h3 class="fh">Two quick things</h3>
+        <p class="fp">This helps Chris understand where you're starting from so the experience is actually useful for you.</p>
+        <div class="field" style="margin-bottom:1.5rem;"><label for="fp">Phone number</label><input type="tel" id="fp" placeholder="+1 (000) 000-0000" /></div>
+        <p style="font-size:14px;font-weight:500;margin-bottom:0.3rem;">On a scale of 1–10, how often do you get into FLOW when you drum?</p>
+        <p class="fp" style="margin-bottom:0.7rem;">1 = Never &nbsp;·&nbsp; 10 = Always</p>
+        <div class="scale-row">
+          <button class="sb" onclick="scl(this)">1</button>
+          <button class="sb" onclick="scl(this)">2</button>
+          <button class="sb" onclick="scl(this)">3</button>
+          <button class="sb" onclick="scl(this)">4</button>
+          <button class="sb" onclick="scl(this)">5</button>
+          <button class="sb" onclick="scl(this)">6</button>
+          <button class="sb" onclick="scl(this)">7</button>
+          <button class="sb" onclick="scl(this)">8</button>
+          <button class="sb" onclick="scl(this)">9</button>
+          <button class="sb" onclick="scl(this)">10</button>
+        </div>
+        <div class="scale-lbl"><span>Never</span><span>Always</span></div>
+        <button class="btn-g" onclick="captureStep2();sendToGHL({stage:'qualified'});go(3);">Next &rarr;</button>
+      </div>
+
+      <!-- Step 3: learning preference -->
+      <div class="fstep" id="s3">
+        <h3 class="fh">How do you prefer to access the LTR DRUMMING Open-Handed System?</h3>
+        <p class="fp">Both paths work — pick what feels right for where you are.</p>
+        <div class="pref-row">
+          <div class="pref-card" id="pref-1" onclick="selPref(1, 'skool')">
+            <div class="pref-radio"><div class="pref-radio-dot"></div></div>
+            <div class="pref-body">
+              <div class="pref-title">Training and community</div>
+              <div class="pref-desc">I want to work through the system on my own pace with the community</div>
+            </div>
+          </div>
+          <div class="pref-card" id="pref-2" onclick="selPref(2, 'personalized')">
+            <div class="pref-radio"><div class="pref-radio-dot"></div></div>
+            <div class="pref-body">
+              <div class="pref-title">Work with Chris directly</div>
+              <div class="pref-desc">I'd benefit from a customized practice plan from Chris to accelerate faster</div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-g" onclick="handlePref()">Next &rarr;</button>
+      </div>
+
+      <!-- Step 4: investment qualifier (only for personalized path) -->
+      <div class="fstep" id="s4">
+        <h3 class="fh">Before we offer you a free call with Chris</h3>
+        <p class="fp">We want to make sure it's the right fit. This is for people who are ready to invest in their drumming.</p>
+        <p style="font-size:14px;font-weight:500;margin-bottom:1.5rem;">Are you ready to invest in your drumming success right now?</p>
+        <div class="three-btn-row">
+          <button class="tbtn primary" onclick="sendToGHL({path:'personalized',investment:'ready'});go(5)">Yes, I'm ready to invest.</button>
+<button class="tbtn secondary" onclick="sendToGHL({path:'personalized',investment:'maybe'});go(5)">I'm not sure, it depends on the offer.</button>
+<button class="tbtn tertiary" onclick="sendToGHL({path:'skool',investment:'no'});goSkool()">No, I'm not ready to invest.</button>
+        </div>
+      </div>
+
+      <!-- Step 5: book free momentum call (qualified personalized path) -->
+      <div class="fstep" id="s5">
+        <h3 class="fh">Great - Chris is excited to speak with you.</h3>
+        <p class="fp">In your free 20-minute momentum call, Chris will explore whether the LTR DRUMMING Open-Handed System is the right fit for you. He'll get a feel for where you're at and walk you through what the path forward looks like.</p>
+        <a class="btn-g" href="https://calendly.com/chrislesso/ltr-drumming-momentum-call" target="_blank" style="text-decoration:none;display:flex;">
+          Book your free momentum call &rarr;
+        </a>
+        <div class="divider"></div>
+        <p class="fine">Want to explore the community first? <a href="https://www.skool.com/ltr-drumming-worldwide/about" target="_blank">Go to LTR DRUMMING &rarr;</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     4. SOCIAL PROOF
+     ══════════════════════════════════ -->
+<div class="sec">
+  <div class="wrap">
+    <p class="sec-label">Real results</p>
+    <h2 class="sec-h">Hear from drummers already inside</h2>
+   <div class="reels-scroll">
+  <div class="reel-card" onclick="toggleReel(this, event)">
+<video src="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/699054d1c086651ae3cb2608.mp4" poster="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/69aa395b618c8d1cde121300.png" playsinline preload="metadata" muted loop></video>    <button class="reel-sound" onclick="toggleSound(this, event)" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg></button>
+    <div class="reel-play"><div class="reel-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+  </div>
+  <div class="reel-card" onclick="toggleReel(this, event)">
+<video src="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/699054d1899b88fdc5811329.mp4" poster="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/69aa3b84b003fa56cdd29c18.png" playsinline preload="metadata" muted loop></video>    <button class="reel-sound" onclick="toggleSound(this, event)" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg></button>
+    <div class="reel-play"><div class="reel-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+  </div>
+  <div class="reel-card" onclick="toggleReel(this, event)">
+<video src="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/699054d1c08665e6c7cb2605.mp4" poster="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/6a164535449f78709edfed9f.png" playsinline preload="metadata" muted loop></video>    <button class="reel-sound" onclick="toggleSound(this, event)" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg></button>
+    <div class="reel-play"><div class="reel-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+  </div>
+  <div class="reel-card" onclick="toggleReel(this, event)">
+<video src="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/699054d1772de91749fa663d.mp4" poster="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/6a1646fb6c22e95c9ecd37ee.png" playsinline preload="metadata" muted loop></video>    <button class="reel-sound" onclick="toggleSound(this, event)" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg></button>
+    <div class="reel-play"><div class="reel-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+  </div>
+  <div class="reel-card" onclick="toggleReel(this, event)">
+<video src="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/699054d1c08665a1c1cb2606.mp4" poster="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/6a1648abd2d32f43412ddad0.png" playsinline preload="metadata" muted loop></video>    <button class="reel-sound" onclick="toggleSound(this, event)" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg></button>
+    <div class="reel-play"><div class="reel-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+  </div>
+  <div class="reel-card" onclick="toggleReel(this, event)">
+<video src="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/699054d124813cbd1571865f.mp4" poster="https://assets.cdn.filesafe.space/F1wF4j1tcv92g6tyAkiq/media/6a1649bdfe894fbda0dbe36e.png" playsinline preload="metadata" muted loop></video>    <button class="reel-sound" onclick="toggleSound(this, event)" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg></button>
+    <div class="reel-play"><div class="reel-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     5. WHAT'S INSIDE
+     ══════════════════════════════════ -->
+<div class="sec alt">
+  <div class="wrap">
+    <p class="sec-label">The LTR DRUMMING Open-Handed System</p>
+    <h2 class="sec-h">What's inside</h2>
+    <p class="sec-sub">Your first two modules unlock free from day one. Everything else opens as you go.</p>
+    <div class="mods-grid">
+      <!-- your 6 .mod cards here -->
+ 
+  <div class="mod">
+    <div class="mod-thumb"><img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487351f1059c428f9d689.jpg" alt="Start Here" /><span class="mbadge mb-free">Free access</span></div>
+    <div class="mod-body"><div class="mod-t">Start Here</div><div class="mod-d">Your open-handed journey begins. Orientation, mindset, and your first win.</div></div>
+  </div>
+  <div class="mod">
+    <div class="mod-thumb"><img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487317e7c5a2f7159059d.jpg" alt="7-Day Challenge" /><span class="mbadge mb-free">Free access</span></div>
+    <div class="mod-body"><div class="mod-t">7-Day Open-Handed Flow Challenge</div><div class="mod-d">Transform your FLOW and take your drumming to a new level in one week.</div></div>
+  </div>
+  <div class="mod">
+    <div class="mod-thumb"><img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487357c135509c88632a9.jpg" alt="Transform Through Drumming" /><span class="mbadge mb-locked">Unlocks inside</span></div>
+    <div class="mod-body"><div class="mod-t">Transform Through Drumming</div><div class="mod-d">Master the LTR 4-Part Framework: Mindset, Ethos, Technique, Expression.</div></div>
+  </div>
+  <div class="mod">
+    <div class="mod-thumb"><img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487357e7c5a2f715905eb.jpg" alt="Routines & Workouts" /><span class="mbadge mb-locked">Unlocks inside</span></div>
+    <div class="mod-body"><div class="mod-t">Routines &amp; Workouts</div><div class="mod-d">Structured open-handed practice routines built around your level and goals.</div></div>
+  </div>
+  <div class="mod">
+    <div class="mod-thumb"><img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a148affa0bd00c015f3ade6.jpg" alt="LTR Guides" /><span class="mbadge mb-locked">Unlocks inside</span></div>
+    <div class="mod-body"><div class="mod-t">LTR Guides</div><div class="mod-d">Deep-dive guides to the concepts that make open-handed playing click.</div></div>
+  </div>
+  <div class="mod">
+    <div class="mod-thumb"><img src="https://assets.cdn.filesafe.space/tgTQ7p2Tcn11z3OsBUmq/media/6a1487337c135509c886326d.jpg" alt="Live Sessions Archive" /><span class="mbadge mb-locked">Unlocks inside</span></div>
+    <div class="mod-body"><div class="mod-t">Live Drumming Sessions Archive</div><div class="mod-d">Every live session with Chris archived — flow, feel, open-handed freedom.</div></div>
+  </div>
+      
+</div>
+</div>
+
+<!-- ══════════════════════════════════
+     6. WORK WITH CHRIS CTA
+     (Replaces full pricing block — keeps the VIP CTA per client feedback)
+     ══════════════════════════════════ -->
+<div class="sec">
+  <div class="wrap">
+    <p class="sec-label">VIP Inner Circle</p>
+    <h2 class="sec-h">Work directly with Chris<br>to fast track your drumming goals</h2>
+    <p class="sec-sub">One-on-one coaching with Chris. Customized practice plans built around where you are and where you want to go.</p>
+    <div style="text-align: center;">
+      <button class="cta-btn" onclick="document.getElementById('form-sec').scrollIntoView({behavior:'smooth'})">
+        Book your free vision session &rarr;
+      </button>
+    </div>
+       </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     7. FAQ
+     ══════════════════════════════════ -->
+<div class="sec alt">
+  <div class="wrap">
+    <p class="sec-label">Got questions?</p>
+    <h2 class="sec-h">Your questions answered</h2>
+    <p class="sec-sub" style="margin-bottom:2rem;">Everything you need to know.</p>
+    <div class="faq-wrap">
+
+      <div class="faq-item open" id="fq0">
+        <button class="faq-q" onclick="faq(0)"><span>Is this really free?</span><div class="faq-ic">+</div></button>
+        <div class="faq-a">Yes — 100% free to join. No credit card, no catch. Fill out the form and you're in. Start Here and the 7-Day Challenge are fully unlocked from day one.</div>
+      </div>
+      <div class="faq-item" id="fq1">
+        <button class="faq-q" onclick="faq(1)"><span>Who is LTR DRUMMING for?</span><div class="faq-ic">+</div></button>
+        <div class="faq-a">If you want to stay where you're at and get a little better, this isn't for you. If you want to transform your drumming by having two strong hands to play with more FLOW and freedom, let's go!</div>
+      </div>
+      <div class="faq-item" id="fq2">
+        <button class="faq-q" onclick="faq(2)"><span>How quickly will I see results?</span><div class="faq-ic">+</div></button>
+        <div class="faq-a">Your playing will transform practically overnight. Our drummers notice a shift in feel and FLOW within the first few sessions of the 7-Day Challenge.</div>
+      </div>
+      <div class="faq-item" id="fq3">
+        <button class="faq-q" onclick="faq(3)"><span>Do I need a full drum kit?</span><div class="faq-ic">+</div></button>
+        <div class="faq-a">All you need is a practice pad! A full kit helps, but the foundational concepts — movement, flow, breath, balance — apply anywhere you play.</div>
+      </div>
+      <div class="faq-item" id="fq4">
+        <button class="faq-q" onclick="faq(4)"><span>What's next?</span><div class="faq-ic">+</div></button>
+        <div class="faq-a">Start the 7-Day Challenge for free to transform your drumming right away! Everything you need to succeed is waiting for you inside.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     8. BOTTOM CTA — "For drummers who refuse to be average"
+     ══════════════════════════════════ -->
+<div class="cta-sec">
+  <div class="wrap">
+    <h2 class="cta-h">For drummers who refuse<br>to be average</h2>
+    <p class="cta-sub">No more random exercises, reading, and rudiments that don't work. Drum with more freedom and FLOW with a clear system that works.</p>
+    <button class="cta-btn" onclick="document.getElementById('form-sec').scrollIntoView({behavior:'smooth'})">
+      Transform my drumming &rarr;
+    </button>
+    <p class="cta-fine">No credit card. No obligation. Start free today.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="wrap">
+    <p>&copy; 2026 LTR DRUMMING / Life Through Rhythm. All rights reserved.</p>
+  </div>
+</div>
+
+<script>
+  var prefChoice = null;
+
+  function go(n) {
+    document.querySelectorAll('.fstep').forEach(function(el){ el.classList.remove('on'); });
+    var t = document.getElementById('s' + n);
+    if (t) t.classList.add('on');
+    for (var i = 1; i <= 5; i++) {
+      var d = document.getElementById('d' + i);
+      if (!d) continue;
+      d.classList.remove('active','done');
+      if (i < n) d.classList.add('done');
+      if (i === n) d.classList.add('active');
+    }
+  }
+
+  function selPref(n, choice) {
+    prefChoice = choice;
+    document.querySelectorAll('.pref-card').forEach(function(card){ card.classList.remove('sel'); });
+    document.getElementById('pref-' + n).classList.add('sel');
+  }
+
+  function handlePref() {
+    if (prefChoice === 'skool') {
+      goSkool();
+    } else if (prefChoice === 'personalized') {
+      go(4);
+    }
+  }
+
+ function goSkool() {
+  sendToGHL({ path: 'skool', choice: prefChoice });
+  window.open('https://www.skool.com/ltr-drumming-worldwide/about', '_blank');
+}
+
+  function scl(btn) {
+    btn.closest('.scale-row').querySelectorAll('.sb').forEach(function(b){ b.classList.remove('sel'); });
+    btn.classList.add('sel');
+  }
+
+  function faq(i) {
+    var item = document.getElementById('fq' + i);
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(el){ el.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  }
+  
+  function toggleReel(card, e) {
+  if (e.target.closest('.reel-sound')) return;
+  var video = card.querySelector('video');
+  if (video.paused) {
+    document.querySelectorAll('.reel-card.playing').forEach(function(c) {
+      c.classList.remove('playing');
+      c.querySelector('video').pause();
+    });
+    video.play();
+    card.classList.add('playing');
+  } else {
+    video.pause();
+    card.classList.remove('playing');
+  }
+}
+
+function toggleSound(btn, e) {
+  e.stopPropagation();
+  var video = btn.closest('.reel-card').querySelector('video');
+  video.muted = !video.muted;
+  btn.innerHTML = video.muted
+    ? '<svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg>'
+    : '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
+}
+  // === GHL WEBHOOK ===
+var GHL_WEBHOOK ='https://services.leadconnectorhq.com/hooks/tgTQ7p2Tcn11z3OsBUmq/webhook-trigger/d4ec9b7c-1bef-498d-a4da-6c9203c1bd70';
+var PAGE_VARIANT = 'free'; // change to 'paid' on the paid page
+
+var leadData = {};
+
+function captureStep1() {
+  leadData.first_name = document.getElementById('fn').value.trim();
+  leadData.email = document.getElementById('fe').value.trim();
+  return leadData.first_name && leadData.email;
+}
+
+function captureStep2() {
+  leadData.phone = document.getElementById('fp').value.trim();
+  var s = document.querySelector('.scale-row .sb.sel');
+  leadData.flow_score = s ? s.textContent : '';
+}
+
+function sendToGHL(extra) {
+  var payload = Object.assign({}, leadData, extra || {}, {
+    page_variant: PAGE_VARIANT,
+    tag: 'split-' + PAGE_VARIANT,
+    submitted_at: new Date().toISOString(),
+    page_url: window.location.href
+  });
+  fetch(GHL_WEBHOOK, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+    mode: 'no-cors'
+  }).catch(function(){});
+}
+</script>
+</body>
+</html>
